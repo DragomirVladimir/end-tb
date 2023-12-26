@@ -29,7 +29,7 @@ const pageWidgetInit = () => {
 		});
 
 		// console.log(pageWidgetArray);
-		pageWidget(pageWidgetArray);
+		// pageWidget(pageWidgetArray);
 	}
 };
 

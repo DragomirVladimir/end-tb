@@ -244,15 +244,15 @@ mixin bread_crumbs(data)
 //- works
 mixin menu(menuArray)
 	- gl_mod = menuArray.gl_mod || '';
-	ul(class=`${menuArray.gl_class}__list `)
+	ul(class=`${menuArray.gl_class}__menu_list `)
 		each item in menuArray.items
 			- url = item.url || '#';
 			li(
-				class=`${menuArray.gl_class}__item ${item.active ? `${menuArray.gl_class}__item--active_mod` : ''} ${gl_mod ? `${menuArray.gl_class}__item--${gl_mod}` : ''}`
+				class=`${menuArray.gl_class}__menu_item ${item.active ? `${menuArray.gl_class}__menu_item--active_mod` : ''} ${gl_mod ? `${menuArray.gl_class}__item--${gl_mod}` : ''}`
 			)
 				a(
 					href=url,
-					class=`${menuArray.gl_class}__link ${gl_mod ? `${menuArray.gl_class}__link--${gl_mod}` : ''}`
+					class=`${menuArray.gl_class}__menu_link ${gl_mod ? `${menuArray.gl_class}__menu_link--${gl_mod}` : ''}`
 				)= item.title
 
 //- works
@@ -265,7 +265,8 @@ mixin social(socialArray)
 				a.social_link(
 					href='#',
 					class=`${mod_link}`,
-					target='_blank'
+					target='_blank',
+					aria-label=`${label}`
 				)
 					+icon(item.name_icon, item.mod_icon)
 

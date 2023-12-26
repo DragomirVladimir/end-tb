@@ -1,2 +1,55 @@
+
+-
+	navMenu = {
+		gl_class: 'nav',
+		items: [
+			{title: 'About Us',},
+			{title: 'Knowledge Hub',},
+			{title: 'Innovators Directory',},
+			{title: 'Application Portal',},
+		],
+	}
+
+	social = {
+		items: [
+			{
+			mod_link: 'instagram',
+			label: 'instagram',
+			name_icon: 'instagram', 
+			mod_icon: 'instagram',
+			},
+
+			{
+				mod_link: 'facebook',
+				label: 'facebook',
+				name_icon: 'facebook', 
+				mod_icon: 'facebook',
+				},
+			{
+				mod_link: 'twitter',
+				label: 'twitter',
+				name_icon: 'twitter', 
+				mod_icon: 'twitter',
+				},
+		]
+	}
+
+	
 mixin header
 	header.header
+		nav.nav 
+
+			a.logo(href="#")
+				img(src="images/logo.png", alt="Re-imagining TB Care") 
+
+			button.burger_btn.burger_btn--open.js-burger-btn--open(type='button', aria-label='open menu') menu 
+
+			.nav__menu 
+
+				button.burger_btn.burger_btn--close.js-burger-btn--close(type='button', aria-label='close menu') close
+
+				.nav__menu_wrapper 
+
+						+menu(navMenu)
+
+						+social(social)
