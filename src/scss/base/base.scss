@@ -7,34 +7,31 @@
 :root {
 	--full-screen: calc(var(--vh, 1vh) * 100);
 
-	--height-header: 10rem;
+	--height-header: 5rem;
 	--height-footer: 10rem;
 	--gl-indent: 5rem;
 }
 
 html {
 	height: 100%;
-	font: 400 calc(100vw / 1920 * 10) / 1.33 $font_1;
+	// font: 400 calc(100vw / 1920 * 10) / 1.33 $font_1;
+	font: 400 16px $font_1;
 }
 
 body {
-	position: relative;
+	// position: relative;
 
-	display: flex;
+	// display: flex;
 	height: 100%;
 
-	font-size: $font_size_base;
-	color: $color_text_base;
+	// font-size: $font_size_base;
+	// color: $color_text_base;
 
 	-webkit-text-size-adjust: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
 	background: $body_bg;
-
-	@supports (display: grid) {
-		display: block;
-	}
 }
 
 .preloader {
@@ -63,7 +60,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
-	height: auto !important;
 
 	overflow-x: hidden;
 }
@@ -76,27 +72,17 @@ body {
 	flex: 1 0 auto;
 }
 
-a {
-	text-decoration: none;
-	color: $color_link_base;
-
-	&:hover,
-	&:focus {
-		text-decoration: underline;
-	}
-}
-
 // for wp
 
-.editor-styles-wrapper .wp-block {
-	margin-bottom: 5rem;
-}
-html :where(.wp-block) {
-	max-width: 1200px;
-}
+// .editor-styles-wrapper .wp-block {
+// 	margin-bottom: 5rem;
+// }
+// html :where(.wp-block) {
+// 	max-width: 1200px;
+// }
 
-.editor-styles-wrapper {
-	overflow-x: hidden;
-}
+// .editor-styles-wrapper {
+// 	overflow-x: hidden;
+// }
 
 //------------------------------------------------------------base styles###

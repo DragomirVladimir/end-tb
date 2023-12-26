@@ -1,4 +1,17 @@
 html,
+body {
+	box-sizing: border-box;
+	word-wrap: break-word;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+	word-wrap: inherit;
+}
+
+html,
 body,
 div,
 span,
@@ -65,12 +78,6 @@ button {
 	font-size: 100%;
 	vertical-align: baseline;
 	background: transparent;
-	box-sizing: border-box;
-
-	&:before,
-	&:after {
-		box-sizing: border-box;
-	}
 }
 
 sub,
@@ -81,19 +88,6 @@ sup {
 	outline: 0;
 	font-size: 100%;
 	background: transparent;
-	box-sizing: border-box;
-
-	&:before,
-	&:after {
-		box-sizing: border-box;
-	}
-}
-
-a {
-	&:before,
-	&:after {
-		box-sizing: border-box;
-	}
 }
 
 table,
@@ -165,34 +159,36 @@ textarea {
 }
 
 input,
-textarea {
-	border-radius: 0;
-	box-sizing: border-box;
+// textarea {
+// 	border-radius: 0;
 
-	&::-webkit-input-placeholder {
-		color: $input_placeholder_color;
-	}
 
-	&::-moz-placeholder {
-		color: $input_placeholder_color;
-	}
-	&:-ms-input-placeholder {
-		color: $input_placeholder_color;
-	}
+// 	&::-webkit-input-placeholder {
+// 		color: $input_placeholder_color;
+// 	}
 
-	&:focus {
-		&::-webkit-input-placeholder {
-			color: transparent;
-		}
+// 	&::-moz-placeholder {
+// 		color: $input_placeholder_color;
+// 	}
 
-		&::-moz-placeholder {
-			color: transparent;
-		}
-		&:-ms-input-placeholder {
-			color: transparent;
-		}
-	}
-}
+// 	&:-ms-input-placeholder {
+// 		color: $input_placeholder_color;
+// 	}
+
+// 	&:focus {
+// 		&::-webkit-input-placeholder {
+// 			color: transparent;
+// 		}
+
+// 		&::-moz-placeholder {
+// 			color: transparent;
+// 		}
+
+// 		&:-ms-input-placeholder {
+// 			color: transparent;
+// 		}
+// 	}
+// }
 
 textarea {
 	resize: none;
@@ -211,8 +207,13 @@ table {
 	border-spacing: 0;
 }
 
-* {
-	box-sizing: border-box;
-	word-wrap: break-word;
+a {
+	text-decoration: none;
 }
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
 //-------------------------------------------------reset*/
