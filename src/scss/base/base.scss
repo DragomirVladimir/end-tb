@@ -34,6 +34,10 @@ body {
 	background: $body_bg;
 }
 
+button {
+	cursor: pointer;
+}
+
 .preloader {
 	position: fixed;
 	top: 0;

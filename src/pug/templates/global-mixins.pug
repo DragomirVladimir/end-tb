@@ -258,11 +258,12 @@ mixin menu(menuArray)
 //- works
 mixin social(socialArray)
 	- mod_block = socialArray.mod_block || '';
-	ul.social_list(class=`${mod_block}`)
+	ul.social(class=`${mod_block}`)
 		each item in socialArray.items
 			- mod_link = item.mod_link || '';
-			li.social_item
-				a.social_link(
+			-label = item.label || '';
+			li.social__item
+				a.social__link(
 					href='#',
 					class=`${mod_link}`,
 					target='_blank',
