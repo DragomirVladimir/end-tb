@@ -9,11 +9,12 @@ block content_block
 		section.hero
 			.hero__bg 
 				picture 
+					source(media="(min-width: 1440px)", srcset="images/hero-bg@2x.jpg")
 					source(media="(max-width: 640px)", srcset="images/hero-bg-mobile.jpg")
 					img(src="images/hero-bg.jpg", alt="")
 
 			.container
-			
+
 				.hero__inner
 					.hero__content
 						h1.hero__title Re-imagining TB Care
