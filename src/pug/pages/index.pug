@@ -4,5 +4,23 @@ block vars
 	//- include ../templates/project-vars
 	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'END TB', template_name: 'index'}
 
-//- block content_block
+block content_block
+	main.main
+		section.hero
+			.hero__bg 
+				picture 
+					source(media="(max-width: 640px)", srcset="images/hero-bg-mobile.jpg")
+					img(src="images/hero-bg.jpg", alt="")
 
+			.container
+			
+				.hero__inner
+					.hero__content
+						h1.hero__title Re-imagining TB Care
+
+						div.hero__text
+							p.
+								Vestibulum id ligula porta felis euismod semper maecenas sed diam eget risus varius blandit sit amet non magna nullam id dolor id nibh ultricies.
+
+						button.btn(type="button")
+							span.btn__text Play video

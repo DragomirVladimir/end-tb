@@ -38,19 +38,20 @@
 
 mixin header
 	header.header
-		nav.nav 
+		.container 
+			nav.nav 
 
-			a.logo(href="#")
-				img(src="images/logo.png", alt="Re-imagining TB Care") 
+				a.logo(href="#")
+					img(src="images/logo.png", alt="Re-imagining TB Care") 
 
-			button.burger_btn.burger_btn--open.js-burger-btn--open(type='button', aria-label='open menu') menu 
+				button.burger_btn.burger_btn--open.js-burger-btn--open(type='button', aria-label='open menu') menu 
 
-			.nav__menu 
+				.nav__menu 
 
-				button.burger_btn.burger_btn--close.js-burger-btn--close(type='button', aria-label='close menu') close
+					button.burger_btn.burger_btn--close.js-burger-btn--close(type='button', aria-label='close menu') close
 
-				.nav__menu_wrapper 
+					.nav__menu_wrapper 
 
-						+menu(navMenu)
+							+menu(navMenu)
 
-						+social(social)
+							+social(social)

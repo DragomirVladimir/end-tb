@@ -25,7 +25,7 @@ body {
 	height: 100%;
 
 	// font-size: $font_size_base;
-	// color: $color_text_base;
+	color: $color_text_base;
 
 	-webkit-text-size-adjust: none;
 	-webkit-font-smoothing: antialiased;
@@ -78,6 +78,15 @@ button {
 	padding: var(--height-header) 0 0;
 
 	flex: 1 0 auto;
+}
+
+.container {
+	padding: 0 3.8rem;
+	margin: 0 auto;
+
+	@media (max-width: $point_4) {
+		padding: 0 1.2rem;
+	}
 }
 
 // for wp
