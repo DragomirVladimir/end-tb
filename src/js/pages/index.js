@@ -5,16 +5,16 @@ const index = () => {
 
 	const logo = navigation.querySelector('.logo');
 
-	// const navLinks = document.querySelectorAll('.nav__menu_link');
-
 	const menuList = navigation.querySelector('.nav__menu_list');
 
-	const burgerBtnOpen = navigation.querySelector('.js-burger-btn--open');
-
-	const burgerBtnClose = navigation.querySelector('.js-burger-btn--close');
+	const burgerBtn = navigation.querySelector('.js-burger-btn');
 
 	function activationMenu() {
 		navigation.classList.add('nav--active');
+
+		burgerBtn.classList.add('burger_btn--active');
+
+		burgerBtn.innerHTML = 'close';
 
 		body.classList.add('disable_scrloll');
 	}
@@ -22,31 +22,25 @@ const index = () => {
 	function deactivationMenu() {
 		navigation.classList.remove('nav--active');
 
+		burgerBtn.classList.remove('burger_btn--active');
+
+		burgerBtn.innerHTML = 'menu';
+
 		body.classList.remove('disable_scrloll');
 	}
 
-	burgerBtnOpen.addEventListener('click', () => {
-		activationMenu();
-	});
-
-	burgerBtnClose.addEventListener('click', () => {
-		deactivationMenu();
+	burgerBtn.addEventListener('click', () => {
+		if (burgerBtn.classList.contains('burger_btn--active')) {
+			deactivationMenu();
+		} else {
+			activationMenu();
+		}
 	});
 
 	logo.addEventListener('click', () => {
 		console.log('logo');
 		deactivationMenu();
 	});
-
-	// navLinks.forEach((el) => {
-
-	//   el.addEventListener('click', () => {
-
-	//     deactivationMenu();
-
-	//   })
-
-	// });
 
 	menuList.addEventListener('click', (event) => {
 		if (

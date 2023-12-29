@@ -84,7 +84,11 @@ button {
 	padding: 0 3.8rem;
 	margin: 0 auto;
 
-	@media (max-width: $point_4) {
+	@include bp($point_4, min) {
+		padding: 0 3.8rem;
+	}
+
+	@include bp($point_4 - 1) {
 		padding: 0 1.2rem;
 	}
 }

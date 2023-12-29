@@ -35,23 +35,14 @@
 		]
 	}
 
-
 mixin header
 	header.header
 		.container 
 			nav.nav 
-
 				a.logo(href="#")
-					img(src="images/logo.png", alt="Re-imagining TB Care") 
-
-				button.burger_btn.burger_btn--open.js-burger-btn--open(type='button', aria-label='open menu') menu 
-
+					img.logo__img(src="images/logo.png", alt="Re-imagining TB Care") 
+				button.burger_btn.js-burger-btn(type='button', aria-label='open menu') menu 
 				.nav__menu 
-
-					button.burger_btn.burger_btn--close.js-burger-btn--close(type='button', aria-label='close menu') close
-
 					.nav__menu_wrapper 
-
 							+menu(navMenu)
-
 							+social(social)

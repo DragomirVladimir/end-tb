@@ -7,12 +7,19 @@
 	width: fit-content;
 	height: 1.52rem;
 
+	color: $accent-color;
 	font-size: 0.68rem;
 	font-weight: 900;
-	letter-spacing: 0.06rem;
+	letter-spacing: -0.02rem;
 	text-transform: uppercase;
 
-	transition: box-shadow 0.2s ease;
+	transition: color 0.2s ease;
+
+	z-index: 100;
+
+	&:hover {
+		color: #024c88;
+	}
 
 	&::after,
 	&::before {
@@ -22,6 +29,18 @@
 		right: 0;
 
 		height: 3px;
+
+		background-color: $accent-color;
+
+		transition: background-color 0.2s ease;
+	}
+
+	&:hover::after {
+		background-color: #024c88;
+	}
+
+	&:hover::before {
+		background-color: #024c88;
 	}
 
 	&::before {
@@ -33,29 +52,12 @@
 		bottom: 0;
 	}
 
-	&--open {
-		color: $accent_color;
-
-		&::after,
-		&::before {
-			background-color: $accent_color;
-		}
-
-		&:hover {
-			box-shadow: inset 0px 0px 4px 2px rgba(99, 99, 99, 0.5);
-		}
-	}
-
-	&--close {
+	&--active {
 		color: $color_text_light;
 
 		&::after,
 		&::before {
 			background-color: $color_text_light;
-		}
-
-		&:hover {
-			box-shadow: inset 0px 0px 4px 2px rgba(255, 255, 255, 0.5);
 		}
 	}
 }
